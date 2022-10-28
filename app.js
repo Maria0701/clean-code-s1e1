@@ -15,37 +15,37 @@ var completedTasksHolder=document.querySelector('#completed-tasks');//completed-
 
 
 //New task list item
-var createNewTaskElement=function(taskString){
+var createNewTaskElement = function(taskString){
 
-    var listItem=document.createElement('li');
-    var checkBox=document.createElement('input');
-    var label=document.createElement('label');
-    var editInput=document.createElement('input');//text
+    var listItem = document.createElement('li');
+    var checkBox = document.createElement('input');
+    var label = document.createElement('label');
+    var editInput = document.createElement('input');//text
     //button.edit
-    var editButton=document.createElement('button');//edit button
+    var editButton = document.createElement('button');//edit button
 
     //button.delete
-    var deleteButton=document.createElement('button');//delete button
-    var deleteButtonImg=document.createElement('img');//delete button image
+    var deleteButton = document.createElement('button');//delete button
+    var deleteButtonImg = document.createElement('img');//delete button image
 
     listItem.setAttribute('class', 'todo-block__item item');
 
-    label.innerText=taskString;
+    label.innerText = taskString;
     label.setAttribute('class', 'item__label task');
 
     //Each elements, needs appending
-    checkBox.type='checkbox';
+    checkBox.type = 'checkbox';
     checkBox.setAttribute('class', 'item__checkbox');
 
-    editInput.type='text';
+    editInput.type = 'text';
     editInput.setAttribute('class', 'item__input task');
 
-    editButton.innerText='Edit'; //innerText encodes special characters, HTML does not.
+    editButton.innerText = 'Edit'; //innerText encodes special characters, HTML does not.
     editButton.setAttribute('class', 'button item__edit');
 
     deleteButton.setAttribute('class', 'button item__delete');
-    deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.classList ='item__delete-img';
+    deleteButtonImg.src = './remove.svg';
+    deleteButtonImg.classList = 'item__delete-img';
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -76,7 +76,7 @@ var addTask=function(){
 
 //Edit an existing task.
 
-var editTask=function(){
+var editTask = function(){
     console.log('Edit Task...');
 
     var listItem=this.parentNode;
@@ -103,7 +103,7 @@ var editTask=function(){
 
 
 //Delete task.
-var deleteTask=function(){
+var deleteTask = function(){
     console.log('Delete Task...');
 
     var listItem=this.parentNode;
@@ -115,7 +115,7 @@ var deleteTask=function(){
 
 
 //Mark task completed
-var taskCompleted=function(){
+var taskCompleted = function(){
     console.log('Complete Task...');
 
     //Append the task list item to the #completed-tasks
@@ -126,7 +126,7 @@ var taskCompleted=function(){
 }
 
 
-var taskIncomplete=function(){
+var taskIncomplete = function() {
     console.log('Incomplete Task...');
 //Mark task as incomplete.
     //When the checkbox is unchecked
@@ -138,7 +138,7 @@ var taskIncomplete=function(){
 
 
 
-var ajaxRequest=function(){
+var ajaxRequest=function() {
     console.log('AJAX Request');
 }
 
