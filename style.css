@@ -28,11 +28,11 @@ button{
     text-align: right;
 }
 
-.info-block img {
+.info-block__img {
     width: 100%;
 }
 
-.info-block .more_inf {
+.info-block__link {
     font-family: fantasy, cursive;
 }
 
@@ -44,7 +44,7 @@ button{
 
 }
 
-.centered-main-page-element {
+.todo-block {
     display: block;
     width: 500px;
     margin: 0 auto 0;
