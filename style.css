@@ -10,7 +10,7 @@ h3 {
 }
 
 input,
-button{
+button {
     outline: none;
 }
 
@@ -56,11 +56,9 @@ button{
     flex-grow: 1
 }
 
-.task-row-wrapper {
+.add-element__wrapper {
     display: flex;
 }
-
-
 
 .button {
     background: none;
@@ -78,8 +76,7 @@ button{
 
 /* Heading */
 
-h3,
-label[for="new-task"] {
+.h3 {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -89,7 +86,8 @@ label[for="new-task"] {
     text-transform: uppercase;
 }
 
-input[type="text"] {
+.item__input,
+.add-element__text {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -102,24 +100,25 @@ input[type="text"] {
     color: #888888;
 }
 
-input[type="text"]:focus {
-    color: #333;
+.item__input:focus,
+.add-element__text:focus {
+    color: #333333;
 }
 
 /* New Task */
 
-label[for="new-task"] {
+.add-element__header {
     display: block;
     margin: 0 0 20px;
 }
 
-input#new-task {
+.add-element__text {
     width: 318px;
 }
 
 /* Task list */
 
-li {
+.item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eeeeee;
@@ -128,53 +127,50 @@ li {
     align-items: center;
 }
 
-li > * {
+.item > * {
     vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.item__checkbox {
     margin: 0 10px;
 }
 
-li > label {
+.item__label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
 
-li > input[type="text"] {
-    width: 226px
+.item__input {
+    width: 226px;
+    display: none;
 }
 
-button.delete img {
+.item__delete-img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.item__delete-img:hover {
     transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-tasks label {
+#completed-tasks .item__label {
     text-decoration: line-through;
     color: #888888;
 }
 
 /* Edit Task */
 
-ul li input[type=text] {
-    display: none;
-}
-
-ul li.edit-mode input[type=text] {
+.edit-mode .item__input {
     display: inline-block;
     width: 224px
 }
 
-ul li.edit-mode label {
+.edit-mode .item__label {
     display: none;
 }
