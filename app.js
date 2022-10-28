@@ -39,7 +39,6 @@ var createNewTaskElement = function(taskString){
         classList: 'todo-block__item item',
     });
 
-
     var checkBox = createNewElement({
         tagName: 'input',
         classList: 'item__checkbox',
@@ -69,7 +68,6 @@ var createNewTaskElement = function(taskString){
         classList: 'button item__delete',
     });
 
-
     var deleteButtonImg =createNewElement({
         tagName: 'img',
         classList: 'item__delete-img',
@@ -86,8 +84,6 @@ var createNewTaskElement = function(taskString){
     listItem.appendChild(deleteButton);
     return listItem;
 }
-
-
 
 var addTask = function(){
     console.log('Add Task...');
@@ -106,17 +102,13 @@ var addTask = function(){
 //Edit an existing task.
 
 var editTask = function(){
-    console.log('Edit Task...');
-
     var listItem = this.parentNode;
-
-    var editInput = listItem.querySelector('input[type=text]');
-    var label = listItem.querySelector('label');
+    var editInput = listItem.querySelector('.item__input');
+    var label = listItem.querySelector('.item__label');
     var editBtn = listItem.querySelector('.item__edit');
     var containsClass = listItem.classList.contains('edit-mode');
     //If class of the parent is .edit-mode
     if (containsClass) {
-
         //switch to .edit-mode
         //label becomes the inputs value.
         label.innerText = editInput.value;
@@ -141,18 +133,14 @@ var deleteTask = function(){
     ul.removeChild(listItem);
 }
 
-
 //Mark task completed
 var taskCompleted = function() {
     console.log('Complete Task...');
-
     //Append the task list item to the #completed-tasks
     var listItem = this.parentNode;
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
-
 }
-
 
 var taskIncomplete = function() {
     console.log('Incomplete Task...');
@@ -164,14 +152,9 @@ var taskIncomplete = function() {
     bindTaskEvents(listItem, taskCompleted);
 }
 
-
-
 var ajaxRequest=function() {
     console.log('AJAX Request');
 }
-
-//The glue to hold it all together.
-
 
 //Set the click handler to the addTask function.
 addButton.onclick=addTask;
@@ -179,10 +162,10 @@ addButton.addEventListener('click', addTask);
 addButton.addEventListener('click', ajaxRequest);
 
 
-var bindTaskEvents = function(taskListItem,checkBoxEventHandler){
+var bindTaskEvents = function(taskListItem,checkBoxEventHandler) {
     console.log('bind list item events');
 //select ListItems children
-    var checkBox = taskListItem.querySelector('input[type=checkbox]');
+    var checkBox = taskListItem.querySelector('.item__checkbox');
     var editButton = taskListItem.querySelector('.item__edit');
     var deleteButton = taskListItem.querySelector('.item__delete');
 
@@ -196,23 +179,17 @@ var bindTaskEvents = function(taskListItem,checkBoxEventHandler){
 
 //cycle over incompleteTaskHolder ul list items
 //for each list item
-for (var i = 0; i < incompleteTaskHolder.children.length;i ++){
+for (var i = 0; i < incompleteTaskHolder.children.length; i++ ) {
 
     //bind events to list items chldren(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
 
-
-
-
 //cycle over completedTasksHolder ul list items
-for (var i = 0; i < completedTasksHolder.children.length; i++){
+for (var i = 0; i < completedTasksHolder.children.length; i++) {
     //bind events to list items chldren(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
-
-
-
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
