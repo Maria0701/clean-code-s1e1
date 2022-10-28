@@ -19,15 +19,16 @@ var createNewElement = ({
     classList,
     srcName,
     textContent,
-    typeName
+    typeName,
+    altName,
 }) => {
     var newBlock = document.createElement(tagName);
     if (classList) newBlock.setAttribute('class', classList);
     if (typeName) newBlock.type = typeName;
     if (srcName) newBlock.src = srcName;
     if (textContent) newBlock.innerText = textContent;
+    if (altName) newBlock.setAttribute('alt', altName);
     return (newBlock)
-
 }
 
 //New task list item
@@ -73,6 +74,7 @@ var createNewTaskElement = function(taskString){
         tagName: 'img',
         classList: 'item__delete-img',
         srcName: './remove.svg',
+        altName: 'delete img',
     });
 
     deleteButton.appendChild(deleteButtonImg);
