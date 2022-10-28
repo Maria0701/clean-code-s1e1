@@ -21,24 +21,24 @@ button{
     font-family: Lato, sans-serif;
 }
 
-.aaa {
+.info-block {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
 }
 
-.aaa img {
+.info-block img {
     width: 100%;
 }
 
-.aaa .more_inf {
+.info-block .more_inf {
     font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-    .aaa {
+    .info-block {
         text-align: center;
     }
 
