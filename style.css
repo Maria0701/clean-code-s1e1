@@ -125,9 +125,6 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.item > * {
     vertical-align: middle;
 }
 
