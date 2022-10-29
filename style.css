@@ -33,7 +33,7 @@ button {
 }
 
 .info-block__link {
-    font-family: fantasy, cursive;
+    font-family: Fantasy, cursive; /*https://developer.mozilla.org/en-US/docs/Web/CSS/font-family*/
 }
 
 @media (max-width:768px) {
