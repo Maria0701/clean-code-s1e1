@@ -10,8 +10,8 @@
 
 var taskInput=document.querySelector('.add-element__text');//Add a new task.
 var addButton=document.querySelectorAll('.button')[0];//first button
-var incompleteTaskHolder=document.querySelector('#incomplete-tasks');//ul of #incomplete-tasks
-var completedTasksHolder=document.querySelector('#completed-tasks');//completed-tasks
+var incompleteTaskHolder=document.querySelector('.todo-block__list--incomplete');//ul of #incomplete-tasks
+var completedTasksHolder=document.querySelector('.todo-block__list--completed');//completed-tasks
 
 
 var createNewElement = ({
@@ -68,7 +68,7 @@ var createNewTaskElement = function(taskString){
         classList: 'button item__delete',
     });
 
-    var deleteButtonImg =createNewElement({
+    var deleteButtonImg = createNewElement({
         tagName: 'img',
         classList: 'item__delete-img',
         srcName: './remove.svg',

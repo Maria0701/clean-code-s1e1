@@ -159,7 +159,7 @@ button {
 
 /* Completed */
 
-#completed-tasks .item__label {
+.todo-block__list--completed .item__label {
     text-decoration: line-through;
     color: #888888;
 }
