@@ -165,7 +165,7 @@ button {
 
 .edit-mode .item__input {
     display: inline-block;
-    width: 224px
+    width: 224px;
 }
 
 .edit-mode .item__label {
